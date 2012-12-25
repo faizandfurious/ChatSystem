@@ -1,4 +1,6 @@
 ChatSystem::Application.routes.draw do
+  resources :doctors
+
   resources :patients
 
   get "home/index"
