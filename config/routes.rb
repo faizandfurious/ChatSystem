@@ -1,4 +1,10 @@
 ChatSystem::Application.routes.draw do
+  resources :questions
+
+  resources :patient_questions
+
+  resources :doctor_patients
+
   devise_for :doctors
 
   resources :doctors

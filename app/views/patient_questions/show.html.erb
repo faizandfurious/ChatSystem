@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Patient:</b>
+  <%= @patient_question.patient_id %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @patient_question.question_id %>
+</p>
+
+<p>
+  <b>Created on:</b>
+  <%= @patient_question.created_on %>
+</p>
+
+<p>
+  <b>Received data:</b>
+  <%= @patient_question.received_data %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_question_path(@patient_question) %> |
+<%= link_to 'Back', patient_questions_path %>

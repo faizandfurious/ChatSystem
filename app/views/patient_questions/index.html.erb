@@ -1,0 +1,29 @@
+<h1>Listing patient_questions</h1>
+
+<table>
+  <tr>
+    <th>Patient</th>
+    <th>Question</th>
+    <th>Created on</th>
+    <th>Received data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patient_questions.each do |patient_question| %>
+  <tr>
+    <td><%= patient_question.patient_id %></td>
+    <td><%= patient_question.question_id %></td>
+    <td><%= patient_question.created_on %></td>
+    <td><%= patient_question.received_data %></td>
+    <td><%= link_to 'Show', patient_question %></td>
+    <td><%= link_to 'Edit', edit_patient_question_path(patient_question) %></td>
+    <td><%= link_to 'Destroy', patient_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Patient question', new_patient_question_path %>
