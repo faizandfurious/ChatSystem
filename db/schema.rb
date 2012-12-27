@@ -11,15 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225181126) do
+ActiveRecord::Schema.define(:version => 20121226160913) do
+
+  create_table "doctor_patients", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "patient_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "doctors", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "username"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+  end
+
+  add_index "doctors", ["email"], :name => "index_doctors_on_email", :unique => true
+  add_index "doctors", ["reset_password_token"], :name => "index_doctors_on_reset_password_token", :unique => true
+
+  create_table "patient_questions", :force => true do |t|
+    t.integer  "patient_id"
+    t.integer  "question_id"
+    t.datetime "created_on"
+    t.boolean  "received_data"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "patients", :force => true do |t|
@@ -28,6 +57,12 @@ ActiveRecord::Schema.define(:version => 20121225181126) do
     t.date     "dob"
     t.string   "address"
     t.string   "phone"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "keyword"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
