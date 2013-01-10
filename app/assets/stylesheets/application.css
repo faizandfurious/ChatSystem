@@ -11,3 +11,205 @@
  *= require_self
  *= require_tree .
  */
+.clickable{
+	cursor: pointer;
+}
+
+body{
+	color:#444;
+}
+
+.btn-map{
+	margin-bottom:10px;
+}
+
+.holder{
+	background:#f9f9f9;
+	min-height: 200px;
+}
+
+.icon{
+	display:inline-block;
+	background-color:black;
+	border:2px solid black;
+	-webkit-border-radius:2px;
+	margin-right:10px;
+}
+
+.mini_name{
+	size:;
+}
+
+.notification{
+	position:absolute;
+	right:-5px;
+	top:-8px;
+}
+.mini-notify{
+	height:20px;
+}
+
+.mini-placeholder{
+	font-style:italic;
+	color:#555;
+}
+
+.mini-face{
+	height:30px;
+}
+
+#selected{
+	background-color:#cecccc;
+	border:1px solid #a6a8a8;
+}
+
+.face{
+	height:100px;
+}
+
+.grey{
+	color:#3f3f3f;
+	font-weight: lighter;
+}
+
+.info{
+	display:inline-block;
+	padding-left:1em;
+	padding-top:.25em;
+}
+
+.well-info{
+	background-color:#fcfcfc;
+}
+
+p.details{
+	font-size:1em;
+	font-weight:lighter;
+	margin-bottom:0px;
+}
+
+p.details.name{
+  	font-weight: bold;
+	font-size:2em;
+	margin-bottom:.2em;
+}
+#info{
+
+	vertical-align:middle;
+}
+
+p.details.mini-name{
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+
+span.prognosis{
+	font-size:.5em;
+	font-weight:lighter;
+	margin-bottom:0px;
+
+}
+
+p.status{
+
+}
+
+p.date{
+	font-size:20px;
+}
+
+.recency{
+	font-size:.7em;
+	font-weight:lighter;
+}
+
+
+
+a.more_info{
+	float:right;
+	clear:both;
+	margin-top:-10px;
+}
+
+.align_left{
+	float:left;
+}
+
+.align_right{
+	float:right;
+}
+
+.bottom_padding{
+	clear:both;
+	padding-bottom:10px;
+}
+
+span.extended_info{
+	width:100%;
+	padding-top:3em;
+}
+
+.hidden{
+	background-color:#fcfcfc;
+	display:none;
+	min-width:93%;
+}
+
+.hidden.none{
+	display:block;
+}
+
+.details{
+	padding-left:10px;
+	padding-bottom:10px;
+}
+
+.well.well-mini{
+	padding:10px;
+	position:relative;
+
+}
+
+.faded{
+	color:#727272;
+}
+
+
+.table-custom th{
+	text-align:center;
+}
+
+
+
+.table-custom td{
+	text-align:center;
+}
+
+.adjust_right{
+	float:right;
+}
+
+.adjust_left{
+	float:left;
+}
+
+.clear{
+	clear:both;
+}
+
+.clickable1{
+	display: none;
+}
+.clickable2{
+	display: none;
+}
+.clickable3{
+	display: none;
+}
+.clickable4{
+	display: none;
+}
+.clickable5{
+	display: none;
+}

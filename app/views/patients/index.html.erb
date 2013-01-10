@@ -11,7 +11,7 @@
   </tr>
 
 <% @patients.each do |patient| %>
-  <tr data-link="<%= patient_path(patient) %>">
+  <tr class = "clickable" data-link="<%= patient_path(patient) %>">
     <td><%= patient.first_name %></td>
     <td><%= patient.last_name %></td>
     <td><%= patient.dob %></td>

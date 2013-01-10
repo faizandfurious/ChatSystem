@@ -1,30 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container well">
+  <div class="span3 well">
+    <div class="span adjust_left">
+      <span="info">
+        <p class="details name"><%= @patient.first_name %> <%= @patient.last_name %></p>
+        <p class="details dob"><%= @patient.dob %></p>
+        <p class="details address"><%= @patient.phone %></p>
+      </span>
+    </div>
+  </div>
 
-<p>
-  <b>First name:</b>
-  <%= @patient.first_name %>
-</p>
+  <div class="span4 well adjust_right well-info">
+    <button class="btn btn-primary adjust_right">Schedule Appointment</button>
+  </div>
 
-<p>
-  <b>Last name:</b>
-  <%= @patient.last_name %>
-</p>
-
-<p>
-  <b>Dob:</b>
-  <%= @patient.dob %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @patient.address %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @patient.phone %>
-</p>
-
-
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+  <div class="clear">
+    <div class="span3 well adjust_left well-info">
+      <div class="adjust_left">
+        <span class="adjust_left">
+          <%= image_tag('line_graph.jpg') %>
+        </span>
+      </div>
+    </div>
+    <div class="span4 adjust_right well well-info">
+      <span>
+        <p>Test sentence</p>
+      </span>
+    </div>
+  </div>
+</div>
