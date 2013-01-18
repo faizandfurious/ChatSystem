@@ -6,16 +6,22 @@ class Patient < ActiveRecord::Base
 
 	#Validations
 	validates_uniqueness_of :phone
+	validates_length_of :phone, :minimum => 10, :maximum => 11
 	before_save :phone
-	
+
 	#Scopes
 
 	#Constants
 
 	#Methods
 	def phone=(num)
-	  num.gsub!(/\D/, '') if num.is_a?(String)
-	  self[:phone] = num.to_i
-	end
+		num.gsub!(/\D/, '') if num.is_a?(String)
 
+		if (num.length == 10)
+			num = '(%s) %s-%s' % [ num[0,3], num[3,3], num[6,4] ]
+		else
+			num = '%s(%s) %s-%s' % [ num[0], num[1,3], num[4,3], num[7,4] ]
+		end
+		self[:phone] = num
+	end
 end
