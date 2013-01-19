@@ -14,7 +14,7 @@
   <tr class = "clickable" data-link="<%= patient_path(patient) %>">
     <td><%= patient.first_name %></td>
     <td><%= patient.last_name %></td>
-    <td><%= patient.dob %></td>
+    <td><%= patient.formatted_dob %></td>
     <td><%= patient.address %></td>
     <td><%= patient.phone %></td>
     <td><%= link_to 'View', patient %></td>
