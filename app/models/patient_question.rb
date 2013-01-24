@@ -6,6 +6,8 @@ class PatientQuestion < ActiveRecord::Base
 	belongs_to :question
 
 	#Validations
+	validates_associated :patient
+	validates_associated :question
 
 	#Scopes
 

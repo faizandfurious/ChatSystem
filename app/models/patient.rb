@@ -6,8 +6,17 @@ class Patient < ActiveRecord::Base
 
 	#Validations
 
-	validates_uniqueness_of :phone
-	validates_length_of :phone, :minimum => 10, :maximum => 11
+  validates :address, :presence => true
+  validates :dob, :presence => true
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
+  validates :phone, :presence => true, :uniqueness => true, :length => {
+    :minumim => 10,
+    :maximum => 11,
+    :too_short => "must have at least 10 numbers",
+    :too_long  => "must have at most 11 numbers"
+  }
+  validates :identifier, :presence => true
 
 	before_save :phone
 

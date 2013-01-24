@@ -6,7 +6,9 @@ class DoctorPatient < ActiveRecord::Base
 	belongs_to :patient
 
 	#Validations
-
+	validates_associated :doctor
+	validates_associated :patient
+	
 	#Scopes
 
 	#Constants

@@ -6,6 +6,7 @@ class Question < ActiveRecord::Base
 	has_many :patients, :through => :patient_questions
 
 	#Validations
+	validates :keyword, :presence => true
 
 	#Scopes
 
