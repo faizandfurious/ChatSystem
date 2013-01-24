@@ -1,4 +1,4 @@
-<h1>Your Patients</h1></br>
+<h1>Clinical Dashboard</h1></br>
 
 <table class="table table-bordered">
   <tr>
@@ -7,7 +7,6 @@
     <th>Date of Birth</th>
     <th>Address</th>
     <th>Phone</th>
-    <th></th>
   </tr>
 
 <% @patients.each do |patient| %>
@@ -17,7 +16,6 @@
     <td><%= patient.formatted_dob %></td>
     <td><%= patient.address %></td>
     <td><%= patient.phone %></td>
-    <td><%= link_to 'View', patient %></td>
   </tr>
 <% end %>
 </table>
