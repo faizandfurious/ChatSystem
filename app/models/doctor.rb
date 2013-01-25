@@ -16,7 +16,7 @@ class Doctor < ActiveRecord::Base
 	validates :last_name, :presence => true
 	validates :password, :confirmation => true, :length => { :minimum => 4, :too_short => "must have at least 4 characters"}
 	validates :password_confirmation, :presence => true
-	validates :username, :presence => true, :format => {:with => /^[-\w\._@]+$/i, :message => "should only contain letters, numbers, or .-_@"}, :unqiueness => true
+	validates :username, :presence => true, :format => {:with => /^[-\w\._@]+$/i, :message => "should only contain letters, numbers, or .-_@"}, :uniqueness => true
 	validates :email, :presence => true, :format => {:with => /^[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info))$/i, :message => "is invalid"}, :uniqueness => true
 	
 	#Scopes
