@@ -11,12 +11,11 @@ class Patient < ActiveRecord::Base
   validates :first_name, :presence => true
   validates :last_name, :presence => true
   validates :phone, :presence => true, :uniqueness => true, :length => {
-    :minumim => 10,
-    :maximum => 11,
+    :minumim => 14,
+    :maximum => 15,
     :too_short => "must have at least 10 numbers",
     :too_long  => "must have at most 11 numbers"
   }
-  validates :identifier, :presence => true
 
 	before_save :phone
 
