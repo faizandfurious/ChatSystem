@@ -10,8 +10,8 @@ class Patient < ActiveRecord::Base
   validates :dob, :presence => true
   validates :first_name, :presence => true
   validates :last_name, :presence => true
-  validates :phone, :presence => true, :uniqueness => true, :length => {
-    :minumim => 14,
+  validates :phone, :presence => true, :uniqueness => true, :numericality => true, :length => {
+    :minimum => 14,
     :maximum => 15,
     :too_short => "must have at least 10 numbers",
     :too_long  => "must have at most 11 numbers"
