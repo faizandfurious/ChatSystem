@@ -21,6 +21,24 @@ class PatientsController < ApplicationController
     end
   end
 
+  def make_request
+    #do something with the data/model
+    # @uri = URI.parse("http://www.faizabbasi.com/")
+    # @res = Net::HTTP.get_response(@uri)
+
+    # Will print response.body
+    args = '/1.0/sessions?action=create&token=1552566066537e48aa2a031fdb162b1dc370ac4e1c8c7c2c200928180eae3b156255958eec53fbe29c92dfeb'
+
+    uri = URI('http://api.tropo.com')
+
+    @res = Net::HTTP.get(uri+args)
+    
+    
+    # Full
+
+
+  end
+
   # GET /patients/new
   # GET /patients/new.json
   def new

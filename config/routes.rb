@@ -9,6 +9,7 @@ ChatSystem::Application.routes.draw do
 
   resources :doctors
 
+  match 'make_request' => 'patients#make_request'
   resources :patients
 
   get "home/index"
