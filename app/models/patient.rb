@@ -18,11 +18,15 @@ class Patient < ActiveRecord::Base
 		:too_long  => "must have at most 11 numbers"
 	}
 
+
 	#Scopes
 
 	#Constants
 
+
 	#Methods
+	
+	#This method removes non-numerical numbers from the phone number entry, leaving the non-formatted number
 	def phone=(num)
 		num.gsub!(/\D/, '') if num.is_a?(String)
 
